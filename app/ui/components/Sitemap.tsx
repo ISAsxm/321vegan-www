@@ -64,9 +64,9 @@ const Sitemap = () => {
             </div>
 
             <div className="w-full  text-left">
-              <h4 className="text-xl text-brand-900 font-medium mb-7">
+              <div className="text-xl text-brand-900 font-medium mb-7">
                 Services
-              </h4>
+              </div>
               <ul className=" transition-all duration-500">
                 {sitemapData
                   .filter((item) => item.category === "services")
@@ -86,9 +86,9 @@ const Sitemap = () => {
               </ul>
             </div>
             <div className="w-full  text-left">
-              <h4 className="text-xl text-gray-900 font-medium mb-7">
+              <div className="text-xl text-gray-900 font-medium mb-7">
                 Ressources
-              </h4>
+              </div>
               <ul className="  transition-all duration-500">
                 {sitemapData
                   .filter((item) => item.category === "resources")
@@ -109,9 +109,9 @@ const Sitemap = () => {
             </div>
 
             <div className="w-full text-left">
-              <h4 className="text-xl text-brand-900 font-medium mb-7">
+              <div className="text-xl text-brand-900 font-medium mb-7">
                 Support
-              </h4>
+              </div>
               <ul className="transition-all duration-500">
                 {sitemapData
                   .filter((item) => item.category === "support")
