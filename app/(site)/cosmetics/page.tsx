@@ -33,7 +33,7 @@ export default function Page() {
               <div className="lg:w-1/2 flex-1">
                 <Image
                   src={assets.mockupCosmetics}
-                  alt="Trouvez des marques de cosmétiques véganes ET cruelty free grâce à l'appli 321 Vegan"
+                  alt=""
                   width={1080}
                   height={1920}
                   className="object-content w-auto h-auto mx-auto lg:w-full lg:mx-0 lg:-ml-8 hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500"
@@ -110,7 +110,7 @@ export default function Page() {
             />
           </section>
 
-          <article id="cosmetics-labels">
+          <article id="cosmetics-labels" className="scroll-mt-20">
             <h2 className="mt-16 mb-12 text-lg font-merriweather">
               Comparatif des labels vegan et cruelty free pour les
               cosmétiques&nbsp;:
@@ -259,5 +259,4 @@ export default function Page() {
       </div>
     </div>
   );
-};
-
+}

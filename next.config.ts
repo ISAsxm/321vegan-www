@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
     "192.168.1.5",
     "*.192.168.1.5",
   ],
+  images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   serverExternalPackages: ["@react-email/components"],
   async rewrites() {
     return [

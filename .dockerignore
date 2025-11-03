@@ -5,9 +5,11 @@ node_modules
 npm-debug.log
 .next
 .git
+.gitignore
 .idea
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+LICENSE.md
 README.md
 SECURITY.md
 TEAM.md

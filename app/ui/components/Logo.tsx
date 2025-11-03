@@ -10,7 +10,6 @@ const Logo = ({ className, ...props }: LogoProps) => {
       alt="Logo 321 Vegan"
       width={915}
       height={915}
-      priority
       className={className}
       {...props}
     />

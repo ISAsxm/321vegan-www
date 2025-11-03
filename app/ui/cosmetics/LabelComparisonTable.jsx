@@ -6,7 +6,7 @@ const LabelComparisonTable = () => {
   const labelsCount = cosmeticsLabelsData.length;
   const criteriaCount = cosmeticsCriteria.length;
   return (
-    <div className="overflow-auto scroll-mt-20">
+    <div className="overflow-auto">
       <h3
         id="label_comparison_table_desc"
         className="sticky left-0 py-2 text-brand-500 font-extrabold tracking-tight"

@@ -11,6 +11,7 @@ const HowDoesItWork = () => {
             width={10}
             height={10}
             className="w-full"
+            unoptimized
           />
         </div>
 

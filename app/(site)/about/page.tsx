@@ -46,7 +46,7 @@ export default function Page() {
             </h2>
             <div className="space-y-4 leading-relaxed text-white">
               <Image
-                className="lg:float-right w-xs mx-auto lg:mx-0 lg:w-sm  hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500"
+                className="lg:float-right w-xs mx-auto lg:mx-0 lg:w-sm h-auto  hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500"
                 src="/logo-light.png"
                 alt="Logo 321 Vegan"
                 width={915}

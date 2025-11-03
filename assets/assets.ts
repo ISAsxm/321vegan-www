@@ -1,25 +1,25 @@
-import mockupImpact from "./mockup-impact.png";
-import mockupPartners from "./mockup-partners.png";
-import mockupScan from "./mockup-scan.png";
-import mockupAdditives from "./mockup-additives.png";
-import mockupCosmetics from "./mockup-cosmetics.png";
-import partnerCommeavant from "./partners/logo-comme-avant.png";
-import partnerMaisonprot from "./partners/logo-maisonprot.png";
-import partnerOVS from "./partners/logo-ovs.png";
-import partnerPetitVeganne from "./partners/logo-petit-veganne.png";
-import partnerTerroirs from "./partners/logo-terroirs.png";
-import partnerVegetalFood from "./partners/logo-vegetalfood.png";
-import partnerZebra from "./partners/logo-zebra.png";
-import chooseCF from "./labels/label-choose-cruelty-free.png";
-import eveVegan from "./labels/label-eve-vegan.png";
-import ihtk from "./labels/label-ihtk.png";
-import leapingBunny from "./labels/label-leaping-bunny.png";
-import petaVeganCF from "./labels/label-peta-cf-and-vegan.png";
-import petaCF from "./labels/label-peta-cruelty-free.png";
-import vLabel from "./labels/label-v-label.png";
-import veganSociety from "./labels/label-vegan-society.png";
-import oneVoiceT from "./labels/label-one-voice-t.png";
-import oneVoiceC from "./labels/label-one-voice-c.png";
+import mockupImpact from "./mockup-impact.webp";
+import mockupPartners from "./mockup-partners.webp";
+import mockupScan from "./mockup-scan.webp";
+import mockupAdditives from "./mockup-additives.webp";
+import mockupCosmetics from "./mockup-cosmetics.webp";
+import partnerCommeavant from "./partners/logo-comme-avant.webp";
+import partnerMaisonprot from "./partners/logo-maisonprot.webp";
+import partnerOVS from "./partners/logo-ovs.webp";
+import partnerPetitVeganne from "./partners/logo-petit-veganne.webp";
+import partnerTerroirs from "./partners/logo-terroirs.webp";
+import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
+import partnerZebra from "./partners/logo-zebra.webp";
+import chooseCF from "./labels/label-choose-cruelty-free.webp";
+import eveVegan from "./labels/label-eve-vegan.webp";
+import ihtk from "./labels/label-ihtk.webp";
+import leapingBunny from "./labels/label-leaping-bunny.webp";
+import petaVeganCF from "./labels/label-peta-cf-and-vegan.webp";
+import petaCF from "./labels/label-peta-cruelty-free.webp";
+import vLabel from "./labels/label-v-label.webp";
+import veganSociety from "./labels/label-vegan-society.webp";
+import oneVoiceT from "./labels/label-one-voice-t.webp";
+import oneVoiceC from "./labels/label-one-voice-c.webp";
 
 export const sitemapData = [
   { url: "/a-propos", label: "À propos", category: "general" },
@@ -57,7 +57,7 @@ export const sitemapData = [
   },
   {
     url: "/verification-de-cosmetiques#cosmetics-labels",
-    label: "Tableau comparatif des labels",
+    label: "Comparatif des labels",
     category: "resources",
   },
   { url: "/sources", label: "Sources", category: "resources" },

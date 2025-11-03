@@ -81,7 +81,7 @@ const Feature = ({
           >
             <Image
               src={bgImage}
-              alt="Scannez les produits et obtenez des résultats immédiats même sans connexion internet."
+              alt=""
               width={1080}
               height={1920}
               className="object-content w-full sm:w-1/2 h-auto mx-auto  rounded-xl lg:absolute lg:left-0 lg:h-full lg:w-auto hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500"

@@ -51,7 +51,7 @@ const JoinUsCta = ({
           Rejoignez le serveur Discord
           <Image
             src="/discord-symbol-white.png"
-            alt="Logo Symbol Discord"
+            alt=""
             width={528}
             height={400}
             className="w-4 h-3"

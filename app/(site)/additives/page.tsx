@@ -32,7 +32,7 @@ export default function Page() {
               <div className="lg:w-1/2 flex-1">
                 <Image
                   src={assets.mockupAdditives}
-                  alt="Vérifiez les additifs avec l'appli 321 Vegan"
+                  alt=""
                   width={1080}
                   height={1920}
                   className="object-content w-auto h-auto mx-auto lg:w-full lg:mx-0 lg:-ml-8 hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500"
