@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     "*.192.168.1.5",
   ],
   images: {
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

@@ -31,7 +31,7 @@ const PartnersListItem = ({
           <Image
             src={logoName}
             alt={`Logo de notre partenaire ${brandName}`}
-            className="w-40 m-auto"
+            className="w-40 l-auto m-auto"
           />
         </div>
 

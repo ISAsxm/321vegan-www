@@ -51,7 +51,6 @@ export default function Page() {
                 alt="Logo 321 Vegan"
                 width={915}
                 height={915}
-                priority
               />
               <p className="text-lg leading-relaxed">
                 À l&apos;origine, 321 Vegan était un simple{" "}
