@@ -1,4 +1,3 @@
-// https://altcha.org/docs/website-integration/#using-altcha-widget
 "use client";
 import {
   useEffect,
@@ -69,11 +68,13 @@ const Altcha = forwardRef<{ value: string | null }, AltchaProps>(
         challengeurl={challengeUrl}
         style={{
           "--altcha-max-width": "100%",
-          "--altcha-color-border": "#92c39c",
+          "--altcha-color-border": "var(--color-brand-300)",
+          "--altcha-color-error-text": "var(--color-red-200)",
         }}
         strings={JSON.stringify(widgetFr)}
         hidelogo={true}
         debug={IS_DEVMODE}
+        delay={200}
       ></altcha-widget>
     );
   }

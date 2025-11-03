@@ -1,11 +1,12 @@
 import { createChallenge } from "altcha-lib";
 import { NextResponse } from "next/server";
-import { ALTCHA_HMAC_KEY } from "@/constants";
+import { generateHmacKey } from "@/app/utils/hmac-key";
 
 export async function GET() {
   try {
+    const hmacKey = generateHmacKey();
     const { challenge, salt, algorithm, signature } = await createChallenge({
-      hmacKey: ALTCHA_HMAC_KEY,
+      hmacKey: hmacKey,
       algorithm: "SHA-256",
       maxnumber: 50000,
       saltLength: 20,

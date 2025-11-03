@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
   const SMTP_SERVER_SERVICE = process.env.SMTP_SERVER_SERVICE;
   const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
   const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
-  const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
+  const WEBSITE_MAIL_RECIEVER = process.env.WEBSITE_MAIL_RECIEVER;
   const { first_name, last_name, email, subject, message } =
     await request.json();
 
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: `"321 Vegan" <${SMTP_SERVER_USERNAME}>`,
-    to: SITE_MAIL_RECIEVER,
+    to: WEBSITE_MAIL_RECIEVER,
     subject: `[321 Vegan WWW] Nouveau message de ${first_name} ${last_name} (${email})`,
     text: emailText,
     html: emailHtml,
