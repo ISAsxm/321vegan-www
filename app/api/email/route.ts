@@ -1,0 +1,73 @@
+import { type NextRequest, NextResponse } from "next/server";
+import { ReactElement } from "react";
+import { render } from "@react-email/components";
+import nodemailer from "nodemailer";
+import Mail from "nodemailer/lib/mailer";
+import EmailTemplate from "@/app/ui/contact/EmailTemplate";
+
+export async function POST(request: NextRequest) {
+  const SMTP_SERVER_SERVICE = process.env.SMTP_SERVER_SERVICE;
+  const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
+  const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
+  const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
+  const { first_name, last_name, email, subject, message } =
+    await request.json();
+
+  const transport = nodemailer.createTransport({
+    service: SMTP_SERVER_SERVICE,
+    auth: {
+      user: SMTP_SERVER_USERNAME,
+      pass: SMTP_SERVER_PASSWORD,
+    },
+  });
+
+  try {
+    await transport.verify();
+  } catch (err) {
+    console.log(
+      "Something Went Wrong",
+      SMTP_SERVER_USERNAME,
+      SMTP_SERVER_PASSWORD,
+      err
+    );
+    return NextResponse.json({ error: err }, { status: 500 });
+  }
+
+  const emailHtml = await render(
+    EmailTemplate({
+      first_name,
+      last_name,
+      email,
+      subject,
+      message,
+    }) as ReactElement
+  );
+
+  const emailText = `Message de ${first_name} ${last_name}, Email : ${email}Sujet: ${subject}, Message: ${message}`;
+
+  const mailOptions: Mail.Options = {
+    from: `"321 Vegan" <${SMTP_SERVER_USERNAME}>`,
+    to: SITE_MAIL_RECIEVER,
+    subject: `[321 Vegan WWW] Nouveau message de ${first_name} ${last_name} (${email})`,
+    text: emailText,
+    html: emailHtml,
+  };
+
+  const sendMailPromise = () =>
+    new Promise<string>((resolve, reject) => {
+      transport.sendMail(mailOptions, function (err) {
+        if (!err) {
+          resolve("Email sent");
+        } else {
+          reject(err.message);
+        }
+      });
+    });
+
+  try {
+    await sendMailPromise();
+    return NextResponse.json({ message: "Email sent" });
+  } catch (err) {
+    return NextResponse.json({ error: err }, { status: 500 });
+  }
+}
