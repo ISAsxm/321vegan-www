@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { contactMeAction } from "@/app/lib/actions";
 import type { ContactFormData } from "@/types/definitions";
 import { ArrowRight } from "lucide-react";
-import Altcha from "@/app/ui/components/Altcha";
+import Altcha from "@/app/ui/contact/Altcha";
 import toast from "react-hot-toast";
 
 const ContactForm = () => {
