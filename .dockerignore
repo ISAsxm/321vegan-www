@@ -6,6 +6,7 @@ npm-debug.log
 .next
 .git
 .gitignore
+.github
 .idea
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
