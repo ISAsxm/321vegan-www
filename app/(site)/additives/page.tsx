@@ -53,6 +53,13 @@ export default function Page() {
                   </strong>
                 </p>
                 <p className="text-justify leading-relaxed">
+                  La base de données des additifs est{" "}
+                  <strong>
+                    disponible hors ligne sur l&apos;application, pratique pour
+                    vérifier un ingédient même dans les zones sans réseau.
+                  </strong>
+                </p>
+                <p className="text-justify leading-relaxed">
                   Grâce à l&apos;appli 321 Vegan,{" "}
                   <strong>
                     les additifs douteux ne sont plus un problème&nbsp;

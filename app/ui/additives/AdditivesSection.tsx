@@ -66,10 +66,15 @@ const AdditivesSection = () => {
           </div>
         </div>
 
-        <p className="mt-12 mb-16 italic leading-relaxed">
-          La base de données des additifs est disponible hors ligne sur
-          l&apos;application, pratique pour vérifier un ingédient même dans les
-          zones sans réseau.
+        <p className="mt-12 mb-16 leading-relaxed italic">
+          La base de données des additifs est construite à partir de{" "}
+          <a
+            href="https://github.com/isitvegan/isitvegan-web"
+            className="pb-1 inline-flex items-center gap-2 border-b-2 border-brand-500 cursor-pointer hover:shadow-[0_1rem_2rem] hover:bg-brand-500 hover:text-white hover:-translate-y-1 focus:bg-brand-500 focus:text-white active:bg-brand-500 active:text-white transition-transform duration-300"
+          >
+            Is It Vegan&nbsp;?
+          </a>
+          . Les données ont été modifiées par rapport à leur version originale.
         </p>
       </section>
     </Modal>

@@ -1,3 +1,10 @@
+// _original_source: {
+//     name: "Is It Vegan ?",
+//     url: "https://github.com/isitvegan/isitvegan-web",
+//     license: "MIT",
+//     note: "Datas has been modified from its original version.",
+//   },
+
 export const veganAdditivesData = [
   {
     description: "",
