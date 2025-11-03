@@ -1,0 +1,14 @@
+Dockerfile
+.dockerignore
+node_modules
+.next
+npm-debug.log
+.next
+.git
+.idea
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+README.md
+SECURITY.md
+TEAM.md
+Makefile
