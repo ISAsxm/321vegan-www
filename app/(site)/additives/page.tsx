@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { assets } from "@/assets/assets";
+import { mockups } from "@/assets/assets";
 import Image from "next/image";
 import AppStoresCta from "@/app/ui/components/AppStoresCta";
 import AdditivesSection from "@/app/ui/additives/AdditivesSection";
@@ -31,7 +31,7 @@ export default function Page() {
             <div className="flex flex-col lg:flex-row mx-auto overflow-hidden">
               <div className="lg:w-1/2 flex-1">
                 <Image
-                  src={assets.mockupAdditives}
+                  src={mockups.mockupAdditives}
                   alt=""
                   width={1080}
                   height={1920}

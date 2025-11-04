@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
-import { assets, cosmeticsSourcesData } from "@/assets/assets";
+import { mockups, cosmeticsSourcesData } from "@/assets/assets";
 import Image from "next/image";
 import AppStoresCta from "@/app/ui/components/AppStoresCta";
 import LabelComparisonTable from "@/app/ui/cosmetics/LabelComparisonTable";
@@ -32,7 +32,7 @@ export default function Page() {
             <div className="flex flex-col lg:flex-row mx-auto overflow-hidden">
               <div className="lg:w-1/2 flex-1">
                 <Image
-                  src={assets.mockupCosmetics}
+                  src={mockups.mockupCosmetics}
                   alt=""
                   width={1080}
                   height={1920}

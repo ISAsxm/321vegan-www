@@ -12,7 +12,7 @@ const FaqSection = () => {
   return (
     <section
       id="faqs"
-      className="relative overflow-hidden touch-pan-x bg-brand-900 pt-16 pb-32 space-y-24 w-full px-[12%] scroll-mt-20"
+      className="relative overflow-hidden bg-brand-900 pt-16 pb-32 space-y-24 w-full px-[12%] scroll-mt-20"
     >
       <MotionH2
         className="text-center mb-2 text-lg text-white/90 font-merriweather"

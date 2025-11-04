@@ -63,7 +63,7 @@ export const sitemapData = [
   { url: "/sources", label: "Sources", category: "resources" },
 ];
 
-export const assets = {
+export const mockups = {
   mockupImpact,
   mockupPartners,
   mockupScan,

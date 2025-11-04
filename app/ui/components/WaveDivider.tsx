@@ -5,9 +5,11 @@ interface WaveDividerProps {
 
 const WaveDivider = ({ previousColor, nextColor }: WaveDividerProps) => {
   return (
-    <div className={`${previousColor || "bg-white"} `}>
+    <div
+      className={`overflow-hidden my-0 -mb-1 ${previousColor || "bg-white"} `}
+    >
       <svg
-        className="h-8 md:h-24 w-full"
+        className="h-15 md:h-30 w-full"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         preserveAspectRatio="none"

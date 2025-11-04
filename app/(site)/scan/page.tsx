@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { assets } from "@/assets/assets";
+import { mockups } from "@/assets/assets";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,7 +31,7 @@ const Page = () => {
             <div className="flex flex-col lg:flex-row mx-auto overflow-hidden">
               <div className="lg:w-1/2 flex-1">
                 <Image
-                  src={assets.mockupScan}
+                  src={mockups.mockupScan}
                   alt=""
                   width={1080}
                   height={1920}
