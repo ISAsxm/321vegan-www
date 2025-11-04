@@ -54,12 +54,12 @@ const ContactForm = () => {
           />
           <label
             htmlFor="first_name"
-            className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
+            className="absolute w-full text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
           >
             Prénom
           </label>
           <div id="first_name-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-200">
+            <p className="mt-2 w-full text-sm text-red-200">
               {errors?.first_name?.message}
             </p>
           </div>
@@ -80,12 +80,12 @@ const ContactForm = () => {
           />
           <label
             htmlFor="last_name"
-            className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            className="absolute w-full text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
           >
             Nom
           </label>
           <div id="last_name-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-200">
+            <p className="mt-2 w-full text-sm text-red-200">
               {errors?.last_name?.message}
             </p>
           </div>
@@ -109,12 +109,12 @@ const ContactForm = () => {
           />
           <label
             htmlFor="email"
-            className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
+            className="absolute w-full text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
           >
             Email
           </label>
           <div id="email-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-200">
+            <p className="mt-2 w-full text-sm text-red-200">
               {errors?.email?.message}
             </p>
           </div>
@@ -132,12 +132,12 @@ const ContactForm = () => {
           ></textarea>
           <label
             htmlFor="message"
-            className="absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
+            className="absolute w-full text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 origin-left peer-focus:start-0 peer-focus:text-brand-100 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto after:content-['*'] after:ml-0.5 after:text-red-200"
           >
             Message
           </label>
           <div id="message-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-200">
+            <p className="mt-2 w-full text-sm text-red-200">
               {errors?.message?.message}
             </p>
           </div>
@@ -150,11 +150,11 @@ const ContactForm = () => {
         >
           <span
             id="subject-group"
-            className="text-sm text-white after:content-['*'] after:ml-0.5 after:text-red-200"
+            className="text-sm w-full text-white after:content-['*'] after:ml-0.5 after:text-red-200"
           >
             Sélectionnez un sujet
           </span>
-          <div className="flex gap-6 mt-4">
+          <div className="flex flex-wrap lg:flex-nowrap gap-6 mt-4">
             <div className="flex items-center">
               <input
                 id="radio1"
@@ -226,7 +226,7 @@ const ContactForm = () => {
             </div>
           </div>
           <div id="subject-error" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-red-200">
+            <p className="mt-2 w-full text-sm text-red-200">
               {errors?.subject?.message}
             </p>
           </div>
