@@ -1,4 +1,4 @@
-.PHONY: install up stop down renew prod
+.PHONY: install up stop down renew prod install-prod
 
 ifneq (,$(wildcard ./.env))
     include .env
@@ -9,7 +9,7 @@ cmd-exists-%:
 	@hash $(*) > /dev/null 2>&1 || \
 		(echo "ERROR: '$(*)' must be installed and available on your PATH."; exit 1)
 
-install:  ## Build and run Docker Compose services
+install:  ## Build and run Docker Compose services for development stage
 	docker compose build --no-cache development
 	docker compose up --force-recreate development
 
@@ -24,6 +24,10 @@ down:  ## Shutdown Docker Compose services for development stage
 
 renew:  ## Build, renew volumes and run Docker Compose services for development stage
 	docker compose up --renew-anon-volumes development
+
+install-prod:  ## Build and run Docker Compose services for production stage
+	docker compose build --no-cache production
+	docker compose up --force-recreate production
 
 prod:  ## Build and run Docker Compose services for production stage
 	docker compose up -d production
