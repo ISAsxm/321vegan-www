@@ -1,8 +1,9 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { owner } from "@/assets/assets";
-import Admonition from "@/app/ui/components/Admonition";
 import { Check, Mail } from "lucide-react";
+import Link from "next/link";
+import Admonition from "@/app/ui/components/Admonition";
+import ObfuscateEmailAddress from "@/app/ui/components/ObfuscateEmailAddress";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
@@ -575,7 +576,7 @@ export default function Page() {
                 </p>
                 <span className="inline-flex items-center text-blue-600 hover:text-blue-500">
                   <Mail className="h-5 w-5 mr-1" strokeWidth={1} />
-                  <span className="obfuscate">{owner.email}</span>
+                  <ObfuscateEmailAddress />
                 </span>
               </div>
             </section>

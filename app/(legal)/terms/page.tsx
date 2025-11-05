@@ -3,6 +3,7 @@ import { owner } from "@/assets/assets";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 import Admonition from "@/app/ui/components/Admonition";
+import ObfuscateEmailAddress from "@/app/ui/components/ObfuscateEmailAddress";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
@@ -61,8 +62,7 @@ export default function Page() {
                     Responsable de la publication&nbsp;:
                   </dt>
                   <dd>
-                    {owner.name} &mdash;{" "}
-                    <span className="obfuscate">{owner.email}</span>
+                    {owner.name} &mdash; <ObfuscateEmailAddress />
                   </dd>
                   <dt className="font-semibold">Hébergeur&nbsp;:</dt>
                   <dd>{owner.webhosting}</dd>
@@ -197,7 +197,7 @@ export default function Page() {
                   </p>
                   <span className="inline-flex items-center text-blue-600 hover:text-blue-500">
                     <Mail className="size-5 mr-1" strokeWidth={1} />
-                    <span className="obfuscate">{owner.email}</span>
+                    <ObfuscateEmailAddress />
                   </span>
                 </div>
                 <p>

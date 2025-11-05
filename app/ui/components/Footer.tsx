@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Image from "next/image";
 import Sitemap from "./Sitemap";
+import ObfuscateEmailAddress from "./ObfuscateEmailAddress";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="w-max flex items-center justify-center gap-2 mx-auto">
           <div className="flex items-center gap-1">
             <Mail strokeWidth={1} aria-hidden="true" />
-            <span className="obfuscate">{owner.email}</span>
+            <ObfuscateEmailAddress className="relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100" />
           </div>
           <div className="h-4 border-l border-gray-400"></div>
           <a

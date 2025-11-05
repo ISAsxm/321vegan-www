@@ -22,12 +22,6 @@
   --plant-marker: "🌱";
 }
 
-@utility obfuscate {
-  direction: rtl;
-  unicode-bidi: bidi-override;
-  white-space: nowrap;
-}
-
 .altcha-checkbox {
   accent-color: var(--color-brand-300);
 }
