@@ -28,13 +28,13 @@ const ContactForm = () => {
     setIsPending(false);
     if (res.success) {
       toast.success("Message envoyé avec succès !");
+      reset();
     } else {
       console.log("Error", res);
       toast.error(
         "Une erreur est survenue. Veuillez réessayer ultérieurement."
       );
     }
-    reset();
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
