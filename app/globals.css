@@ -21,3 +21,7 @@
   --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
   --plant-marker: "🌱";
 }
+
+.altcha-checkbox {
+  accent-color: var(--color-brand-300);
+}
