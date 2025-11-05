@@ -38,7 +38,7 @@ const ContributionSection = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
       >
         Rejoignez la{" "}
-        <strong>communauté de contributeurices et contributeurs</strong> afin
+        <strong>communauté de contributrices et contributeurs</strong> afin
         d&apos;
         <strong>aider à rendre le véganisme facile pour tout le monde</strong>.
         Voici{" "}
