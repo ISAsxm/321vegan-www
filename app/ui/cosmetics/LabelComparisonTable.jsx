@@ -23,6 +23,9 @@ const LabelComparisonTable = () => {
         aria-describedby="label_comparison_table_desc"
         aria-rowcount="9"
       >
+        <div className="col-start-1 col-end-2 h-full sticky left-0 py-2 px-3 flex items-center font-semibold bg-white border-b border-l border-transparent text-xs lg:text-sm tracking-tight">
+          &nbsp;
+        </div>
         {cosmeticsCriteria.map((criterion, index) => (
           <div
             key={`criterion-${index}`}
