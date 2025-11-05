@@ -576,7 +576,7 @@ export default function Page() {
                 </p>
                 <span className="inline-flex items-center text-blue-600 hover:text-blue-500">
                   <Mail className="h-5 w-5 mr-1" strokeWidth={1} />
-                  <ObfuscateEmailAddress />
+                  <ObfuscateEmailAddress className="whitespace-nowrap" />
                 </span>
               </div>
             </section>

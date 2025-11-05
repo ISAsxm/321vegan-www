@@ -62,7 +62,8 @@ export default function Page() {
                     Responsable de la publication&nbsp;:
                   </dt>
                   <dd>
-                    {owner.name} &mdash; <ObfuscateEmailAddress />
+                    {owner.name} &mdash;{" "}
+                    <ObfuscateEmailAddress className="whitespace-nowrap" />
                   </dd>
                   <dt className="font-semibold">Hébergeur&nbsp;:</dt>
                   <dd>{owner.webhosting}</dd>
@@ -197,7 +198,7 @@ export default function Page() {
                   </p>
                   <span className="inline-flex items-center text-blue-600 hover:text-blue-500">
                     <Mail className="size-5 mr-1" strokeWidth={1} />
-                    <ObfuscateEmailAddress />
+                    <ObfuscateEmailAddress className="whitespace-nowrap" />
                   </span>
                 </div>
                 <p>

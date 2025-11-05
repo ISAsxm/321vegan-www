@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
   const SMTP_SERVER_SERVICE = process.env.SMTP_SERVER_SERVICE;
   const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
   const SMTP_SERVER_PORT = process.env.SMTP_SERVER_PORT;
+  const SMTP_SERVER_SECURE = process.env.SMTP_SERVER_SECURE;
   const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
   const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
   const WEBSITE_MAIL_RECIEVER = process.env.WEBSITE_MAIL_RECIEVER;
@@ -28,7 +29,7 @@ export async function POST(request: NextRequest) {
     transport = nodemailer.createTransport({
       host: SMTP_SERVER_HOST,
       port: parseInt(<string>SMTP_SERVER_PORT, 10) || undefined,
-      secure: false,
+      secure: SMTP_SERVER_SECURE === "true",
       auth: {
         user: SMTP_SERVER_USERNAME,
         pass: SMTP_SERVER_PASSWORD,

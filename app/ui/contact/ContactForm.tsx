@@ -28,13 +28,13 @@ const ContactForm = () => {
     setIsPending(false);
     if (res.success) {
       toast.success("Message envoyé avec succès !");
-      reset();
     } else {
       console.log("Error", res);
       toast.error(
         "Une erreur est survenue. Veuillez réessayer ultérieurement."
       );
     }
+    reset();
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -232,7 +232,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="col-span-full">
+        <div className="col-span-full [&.altcha-checkbox]:accent-brand-300">
           <Altcha ref={altchaRef} onStateChange={setCaptcha} />
         </div>
       </div>
