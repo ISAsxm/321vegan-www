@@ -32,7 +32,7 @@ const JoinUsCta = ({
       <p className={`mb-6 ${textColor}`}>
         {children || (
           <>
-            Rejoignez l&apos;équipe de contributeurices et contributeurs afin
+            Rejoignez l&apos;équipe de contributrices et contributeurs afin
             d&apos;aider à rendre le véganisme facile pour tout le monde. Aucune
             contribution n&apos;est trop petite &mdash; qu&apos;il s&apos;agisse
             de corriger une coquille, d&apos;améliorer la documentation, de
