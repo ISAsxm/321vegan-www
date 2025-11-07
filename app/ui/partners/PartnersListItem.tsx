@@ -1,16 +1,9 @@
-import Image, { StaticImageData } from "next/image";
+import { PartnerDataType } from "@/types/definitions";
 import { SquareArrowOutUpRight } from "lucide-react";
+import Image from "next/image";
 
 interface PartnersListItemProps {
-  partner: {
-    brandName: string;
-    logoName: StaticImageData;
-    discountCode: string;
-    discountAmount: string;
-    description: string;
-    websiteUrl: string;
-    affiliate: boolean;
-  };
+  partner: PartnerDataType;
 }
 
 const PartnersListItem = ({
@@ -28,19 +21,23 @@ const PartnersListItem = ({
     <div className="bg-brand-50 shadow-sm rounded-lg hover:-translate-y-1 hover:scale-[1.1] transition-all duration-500 h-full group">
       <div className="flex flex-col gap-4 sm:flex-row items-start px-6 py-5 h-full">
         <div className="flex items-center justify-center min-w-40">
-          <Image
-            src={logoName}
-            alt={`Logo de notre partenaire ${brandName}`}
-            className="w-40 l-auto m-auto"
-          />
+          <Image src={logoName} alt="" className="w-40 l-auto m-auto" />
         </div>
 
         <div className="grow h-full flex flex-col">
           <div className="w-full flex justify-between items-center mb-3">
-            <h2 className="text-2xl leading-snug font-extrabold text-brand-700 mt-2 mb-1 sm:mt-0 sm:mb-0">
+            <span className="text-2xl leading-snug font-extrabold text-brand-700 mt-2 mb-1 sm:mt-0 sm:mb-0">
               {brandName}
-            </h2>
-            {affiliate && <span className="text-2xl">⭐️</span>}
+            </span>
+            {affiliate && (
+              <span
+                className="text-2xl"
+                role="img"
+                aria-label="Code promo affilié"
+              >
+                ⭐️
+              </span>
+            )}
           </div>
 
           <p className="mb-2 leading-relaxed text-brand-900 whitespace-normal">
@@ -48,8 +45,9 @@ const PartnersListItem = ({
           </p>
 
           <div className="mt-auto">
+            <h3 className="font-medium">Code promo {brandName}&nbsp;:</h3>
             <p className="text-yellow-600 mb-2">{discountAmount}</p>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
               <span className="py-1 px-2.5 border-none rounded-lg bg-brand-600 text-white font-medium">
                 {discountCode}
               </span>

@@ -4,7 +4,7 @@ import { ClipboardEvent, HTMLProps } from "react";
 import { owner } from "@/assets/assets";
 
 const ObfuscateEmailAddress = ({ ...props }: HTMLProps<HTMLAnchorElement>) => {
-  const emailAddress = owner.email as string;
+  const emailAddress = owner.email;
   const reverseString = (s: string) => {
     return [...s].reverse().join("");
   };

@@ -1,13 +1,8 @@
+import { TestimonialDataType } from "@/types/definitions";
 import clsx from "clsx";
 
 interface TestimonialProps {
-  testimonial: {
-    username: string;
-    date: string;
-    title: string;
-    comment: string;
-    rate: number;
-  };
+  testimonial: TestimonialDataType;
 }
 
 const Testimonial = ({

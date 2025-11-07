@@ -1,3 +1,5 @@
+import { AdditiveDataType } from "@/types/definitions";
+
 // _original_source: {
 //     name: "Is It Vegan ?",
 //     url: "https://github.com/isitvegan/isitvegan-web",
@@ -5,7 +7,7 @@
 //     note: "Datas has been modified from its original version.",
 //   },
 
-export const veganAdditivesData = [
+export const veganAdditivesData: AdditiveDataType[] = [
   {
     description: "",
     e_number: "E133",
@@ -2296,7 +2298,7 @@ export const veganAdditivesData = [
   },
 ];
 
-export const nonVeganAdditesData = [
+export const nonVeganAdditesData: AdditiveDataType[] = [
   {
     description: "Extrait d'œuf de poule",
     e_number: "E1105",
@@ -2366,7 +2368,7 @@ export const nonVeganAdditesData = [
   },
 ];
 
-export const maybeVeganAdditivesData = [
+export const maybeVeganAdditivesData: AdditiveDataType[] = [
   {
     description: "",
     e_number: "E170",
@@ -2770,7 +2772,7 @@ export const maybeVeganAdditivesData = [
   },
 ];
 
-export const additivesData = [
+export const additivesData: AdditiveDataType[] = [
   ...veganAdditivesData,
   ...nonVeganAdditesData,
   ...maybeVeganAdditivesData,

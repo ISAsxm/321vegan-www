@@ -1,11 +1,9 @@
+import { FaqDataType } from "@/types/definitions";
 import { ChevronDown } from "lucide-react";
 import { Markup } from "interweave";
 
 interface FaqProps {
-  faq: {
-    title: string;
-    description: string;
-  };
+  faq: FaqDataType;
 }
 
 const Faq = ({ faq: { title, description } }: FaqProps) => {

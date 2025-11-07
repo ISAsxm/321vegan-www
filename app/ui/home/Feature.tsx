@@ -1,18 +1,13 @@
+import { FeatureDataType } from "@/types/definitions";
 import { clsx } from "clsx";
 import { MotionDiv, MotionLink } from "@/app/ui/components/Motions";
 import { Markup } from "interweave";
 import { ArrowRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Icon from "@/app/ui/components/Icon";
 
 interface FeatureProps {
-  feature: {
-    title: string;
-    description: string;
-    bgImage: StaticImageData;
-    link: string;
-    icon: string;
-  };
+  feature: FeatureDataType;
   index: number;
 }
 const Feature = ({

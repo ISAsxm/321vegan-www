@@ -22,11 +22,11 @@ export default function manifest(): MetadataRoute.Manifest {
     related_applications: [
       {
         platform: "apple",
-        url: appStoreLinks.apple ?? "",
+        url: appStoreLinks.apple,
       },
       {
         platform: "play",
-        url: appStoreLinks.google ?? "",
+        url: appStoreLinks.google,
       },
     ],
   };

@@ -1,17 +1,15 @@
 "use client";
 import Modal from "@/app/ui/components/Modal";
+import { AdditiveDataType } from "@/types/definitions";
 
 interface AdditiveItemProps {
-  description: string;
-  e_number: string;
-  name: string;
-  status: string;
-  link: string;
+  item: AdditiveDataType;
 }
 
 interface AdditivesListProps {
-  data: Array<AdditiveItemProps>;
+  data: AdditiveDataType[];
 }
+
 const AdditivesList = ({ data }: AdditivesListProps) => {
   return (
     <ul className="flex flex-wrap items-center justify-evenly gap-3">
@@ -22,7 +20,7 @@ const AdditivesList = ({ data }: AdditivesListProps) => {
   );
 };
 
-export const AdditiveItem = ({ item }: { item: AdditiveItemProps }) => {
+export const AdditiveItem = ({ item }: AdditiveItemProps) => {
   const { e_number, name, description, status, link } = item;
   return (
     <li className="inline-block ">

@@ -1,21 +1,11 @@
 import { clsx } from "clsx";
-import Icon from "@/app/ui/components/Icon";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Markup } from "interweave";
-
-interface SourceLink {
-  url: string;
-  label: string;
-}
+import { SourceDataType } from "@/types/definitions";
+import Icon from "@/app/ui/components/Icon";
 
 interface SourceProps {
-  source: {
-    title: string;
-    description: string;
-    icon: string;
-    color: string;
-    link: SourceLink;
-  };
+  source: SourceDataType;
 }
 
 const SourcesListItem = ({
