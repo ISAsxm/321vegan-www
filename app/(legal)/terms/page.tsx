@@ -20,7 +20,7 @@ export default function Page() {
             </h1>
           </header>
           <main>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 1. Édition du site
               </h2>
@@ -84,7 +84,7 @@ export default function Page() {
                 </dl>
               </div>
             </section>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 2. Propriété intellectuelle et contrefaçons
               </h2>
@@ -124,7 +124,7 @@ export default function Page() {
                 </Admonition>
               </div>
             </section>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 3. Limitations de responsabilité
               </h2>
@@ -171,7 +171,7 @@ export default function Page() {
                 </Admonition>
               </div>
             </section>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 4. CNIL et gestion des données personnelles
               </h2>
@@ -215,7 +215,7 @@ export default function Page() {
                 </p>
               </div>
             </section>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 5. Liens hypertextes et cookies
               </h2>
@@ -259,7 +259,7 @@ export default function Page() {
                 </p>
               </div>
             </section>
-            <section className="mb-8" id="terms">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 6. Droit applicable et attribution de juridiction
               </h2>

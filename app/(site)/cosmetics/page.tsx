@@ -201,11 +201,10 @@ export default function Page() {
                 Il n&apos;est pas simple pour le consommateur ou la
                 consommatrice de se repérer parmi tous ces labels
               </strong>
-              , c&apos;est pourquoi{" "}
+              , c&apos;est pourquoi 321 Vegan a réalisé pour vous ce{" "}
               <strong>
-                321 Vegan a réalisé pour vous ce tableau récapitulatif des
-                garanties offertes par les principaux labels vegan et labels
-                cruelty free
+                tableau récapitulatif des garanties offertes par les principaux
+                labels vegan et labels cruelty free
               </strong>
               , en plus de{" "}
               <strong>

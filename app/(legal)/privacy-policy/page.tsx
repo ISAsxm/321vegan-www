@@ -104,7 +104,7 @@ export default function Page() {
               </div>
             </section>
 
-            <section className="mb-8" id="privacy-policy">
+            <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
                 2. Principes relatifs à la collecte et au traitement des données
                 personnelles

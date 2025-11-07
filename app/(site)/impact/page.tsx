@@ -8,7 +8,7 @@ import SourcesList from "@/app/ui/impact/SourcesList";
 export const metadata: Metadata = {
   title: "Suivi d'impact",
   description:
-    "Visualisez combien d'animaux vous auriez consommé sans être végane, combien de CO₂ vous avez évité d'émettre, combien de mètres carrés de forêt ont été préservés et combien de litres d'eau vous avez économisés depuis que vous avez adopté un mode de vie végane.",
+    "Mesurez l'impact de votre véganisme sur les animaux et l’environnement grâce à notre calculatrice végane.",
 };
 
 export default function Page() {
@@ -23,8 +23,8 @@ export default function Page() {
         <main>
           <article>
             <h2 className="mb-12 text-lg font-merriweather">
-              Estimations de l’impact du mode de vie végane sur les animaux et
-              l’environnement.
+              Estimation de l&apos;impact du véganisme sur les animaux et
+              l&apos;environnement.
             </h2>
 
             <div className="flex flex-col lg:flex-row mx-auto overflow-hidden">
@@ -64,11 +64,8 @@ export default function Page() {
                   animale,{" "}
                   <strong>
                     les véganes contribuent à la réduction de l&apos;empreinte
-                    carbone
-                  </strong>
-                  , à la{" "}
-                  <strong>
-                    préservation des écosystèmes et de la biodiversité
+                    carbone, à la préservation des écosystèmes et de la
+                    biodiversité
                   </strong>
                   .
                 </p>
@@ -81,16 +78,32 @@ export default function Page() {
                   . Mais le véganisme est surtout{" "}
                   <strong>un engagement éthique envers les animaux</strong>.
                 </p>
-
-                <section className="lg:mt-auto">
-                  <AppStoresCta />
-                </section>
+                <p className="text-justify leading-relaxed">
+                  Grâce à notre <strong>calculatrice végane</strong>, visualisez{" "}
+                  <strong>combien d&apos;animaux vous avez sauvés</strong>,{" "}
+                  <strong>
+                    combien de CO<sub>2</sub> vous avez évité d&apos;émettre
+                  </strong>
+                  ,{" "}
+                  <strong>
+                    combien de mètres carrés de forêt ont été préservés
+                  </strong>{" "}
+                  et{" "}
+                  <strong>
+                    combien de litres d&apos;eau vous avez économisés
+                  </strong>{" "}
+                  depuis que vous avez adopté un mode de vie végane.
+                </p>
               </div>
             </div>
           </article>
 
-          <section>
-            <h2 className="mb-12 text-lg font-merriweather">
+          <section className="">
+            <AppStoresCta />
+          </section>
+
+          <section id="sources" className="scroll-mt-20">
+            <h2 className="mt-16 mb-12 text-lg font-merriweather">
               L&apos;appli 321 Vegan vous aide à mesurer votre impact sur les
               animaux et l&apos;environnement grâce aux études suivantes&nbsp;:
             </h2>

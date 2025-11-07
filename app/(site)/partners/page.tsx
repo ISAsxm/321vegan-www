@@ -8,7 +8,7 @@ import PartnersList from "@/app/ui/partners/PartnersList";
 export const metadata: Metadata = {
   title: "Nos partenaires",
   description:
-    "Avec les codes promos de nos partenaires, vous bénéficiez de réductions lors de vos achats dans leurs boutiques en ligne de nos partenaires.",
+    "Avec les codes promos de nos partenaires, vous bénéficiez de réductions lors de vos achats dans leurs boutiques en ligne.",
 };
 
 export default function Page() {
@@ -24,8 +24,8 @@ export default function Page() {
         <main>
           <section>
             <h2 className="mb-12 text-lg font-merriweather">
-              Des réductions auprès de nos partenaires pour vous faire du bien
-              tout en faisant le bien.
+              Avec les codes promos de nos partenaires, vous bénéficiez de
+              réductions dans leurs boutiques en ligne.
             </h2>
             <div className="flex flex-col lg:flex-row mx-auto overflow-hidden">
               <div className="lg:w-1/2 flex-1">
@@ -72,9 +72,9 @@ export default function Page() {
             </div>
           </section>
 
-          <section>
+          <section id="discounts" className="scroll-mt-20">
             <h2 className="my-12 text-lg font-merriweather">
-              Liste de nos partenaires offrant des codes de réductions&nbsp;:
+              Liste de nos partenaires offrant des codes promos&nbsp;:
             </h2>
 
             <PartnersList />
