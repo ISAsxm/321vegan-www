@@ -1,3 +1,16 @@
+import {
+  AppStoreLinksType,
+  ContributionDataType,
+  CosmeticsLabelDataType,
+  FaqDataType,
+  FeatureDataType,
+  OwnerType,
+  PartnerDataType,
+  SitmapDataType,
+  SocialNetworkLinksType,
+  SourceDataType,
+  TestimonialDataType,
+} from "@/types/definitions";
 import mockupImpact from "./mockup-impact.webp";
 import mockupPartners from "./mockup-partners.webp";
 import mockupScan from "./mockup-scan.webp";
@@ -9,6 +22,7 @@ import partnerOVS from "./partners/logo-ovs.webp";
 import partnerPetitVeganne from "./partners/logo-petit-veganne.webp";
 import partnerTerroirs from "./partners/logo-terroirs.webp";
 import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
+import partnerPaPondu from "./partners/logo-papondu.webp";
 import partnerZebra from "./partners/logo-zebra.webp";
 import chooseCF from "./labels/label-choose-cruelty-free.webp";
 import eveVegan from "./labels/label-eve-vegan.webp";
@@ -21,7 +35,15 @@ import veganSociety from "./labels/label-vegan-society.webp";
 import oneVoiceT from "./labels/label-one-voice-t.webp";
 import oneVoiceC from "./labels/label-one-voice-c.webp";
 
-export const sitemapData = [
+export const mockups = {
+  mockupImpact,
+  mockupPartners,
+  mockupScan,
+  mockupAdditives,
+  mockupCosmetics,
+};
+
+export const sitemapData: SitmapDataType[] = [
   { url: "/a-propos", label: "À propos", category: "general" },
   {
     url: "/scanner-vegan",
@@ -47,9 +69,9 @@ export const sitemapData = [
     category: "support",
   },
   { url: "/mentions-legales", label: "Mentions légales", category: "support" },
-  { url: "/#faqs", label: "FAQs", category: "resources" },
-  { url: "/#contributions", label: "Nous rejoindre", category: "resources" },
-  { url: "/#testimonials", label: "Témoignages", category: "resources" },
+  { url: "/#faqs", label: "FAQs", category: "general" },
+  { url: "/#contributions", label: "Nous rejoindre", category: "general" },
+  { url: "/#testimonials", label: "Témoignages", category: "general" },
   {
     url: "/verification-d-additifs#additives",
     label: "Liste des additifs",
@@ -60,38 +82,35 @@ export const sitemapData = [
     label: "Comparatif des labels",
     category: "resources",
   },
+  {
+    url: "/partenaires#discounts",
+    label: "Codes promos",
+    category: "resources",
+  },
   { url: "/sources", label: "Sources", category: "resources" },
 ];
 
-export const mockups = {
-  mockupImpact,
-  mockupPartners,
-  mockupScan,
-  mockupAdditives,
-  mockupCosmetics,
+export const owner: OwnerType = {
+  name: process.env.NEXT_PUBLIC_OWNER_NAME ?? "",
+  email: process.env.NEXT_PUBLIC_OWNER_EMAIL ?? "",
+  address: process.env.NEXT_PUBLIC_OWNER_ADDRESS ?? "",
+  website: process.env.NEXT_PUBLIC_OWNER_WEBSITE ?? "",
+  webhosting: process.env.NEXT_PUBLIC_OWNER_WEBHOSTING ?? "",
 };
 
-export const owner = {
-  name: process.env.NEXT_PUBLIC_OWNER_NAME,
-  email: process.env.NEXT_PUBLIC_OWNER_EMAIL,
-  address: process.env.NEXT_PUBLIC_OWNER_ADDRESS,
-  website: process.env.NEXT_PUBLIC_OWNER_WEBSITE,
-  webhosting: process.env.NEXT_PUBLIC_OWNER_WEBHOSTING,
+export const appStoreLinks: AppStoreLinksType = {
+  apple: process.env.NEXT_PUBLIC_APPLE_LINK ?? "",
+  google: process.env.NEXT_PUBLIC_GOOGLE_LINK ?? "",
 };
 
-export const appStoreLinks = {
-  apple: process.env.NEXT_PUBLIC_APPLE_LINK,
-  google: process.env.NEXT_PUBLIC_GOOGLE_LINK,
+export const socialNetworkLinks: SocialNetworkLinksType = {
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_LINK ?? "",
+  discord: process.env.NEXT_PUBLIC_DISCORD_LINK ?? "",
+  github: process.env.NEXT_PUBLIC_GITHUB_LINK ?? "",
+  buymeacoffee: process.env.NEXT_PUBLIC_BUYMEACOFFE_LINK ?? "",
 };
 
-export const socialNetworkLinks = {
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_LINK,
-  discord: process.env.NEXT_PUBLIC_DISCORD_LINK,
-  github: process.env.NEXT_PUBLIC_GITHUB_LINK,
-  buymeacoffee: process.env.NEXT_PUBLIC_BUYMEACOFFE_LINK,
-};
-
-export const featuresData = [
+export const featuresData: FeatureDataType[] = [
   {
     title: "Scanner de codes-barres ultra-rapide",
     icon: "scan-barcode",
@@ -134,7 +153,7 @@ export const featuresData = [
   },
 ];
 
-export const contributionsData = [
+export const contributionsData: ContributionDataType[] = [
   {
     icon: "scan-barcode",
     title: "Suggérer des produits",
@@ -161,7 +180,7 @@ export const contributionsData = [
   },
 ];
 
-export const testimonialData = [
+export const testimonialData: TestimonialDataType[] = [
   {
     username: "Alexandre Bdrl",
     date: "24/07/2025",
@@ -220,7 +239,7 @@ export const testimonialData = [
   },
 ];
 
-export const faqData = [
+export const faqData: FaqDataType[] = [
   {
     title: "Comment télécharger et utiliser l'application ?",
     description:
@@ -281,7 +300,7 @@ export const faqData = [
   },
 ];
 
-export const partnersData = [
+export const partnersData: PartnerDataType[] = [
   {
     brandName: "Comme Avant",
     logoName: partnerCommeavant,
@@ -352,9 +371,19 @@ export const partnersData = [
       "Boutique de produits alimentaires véganes en ligne avec un très large choix !",
     affiliate: false,
   },
+  {
+    brandName: "Le Papondu",
+    logoName: partnerPaPondu,
+    discountCode: "PAPON10",
+    discountAmount: "10% sur la première commande",
+    websiteUrl: "https://papondu.fr/acheter/",
+    description:
+      "Alternatives végétales à l’oeuf entier (blanc et jaune battus) produites en France et composées d’ingrédients d’origine naturelle.",
+    affiliate: false,
+  },
 ];
 
-export const sourcesData = [
+export const sourcesData: SourceDataType[] = [
   {
     title: "Animaux terrestres épargnés",
     description: "Chiffres clés sur la souffrance animale.",
@@ -411,7 +440,7 @@ export const sourcesData = [
   },
 ];
 
-export const cosmeticsCriteria = [
+export const cosmeticsCriteria: string[] = [
   "Absence de tests sur animaux",
   "Absence de tests sur animaux sur les marchés étrangers",
   "Absence de chair animale",
@@ -422,7 +451,7 @@ export const cosmeticsCriteria = [
   "Audits de contrôle",
 ];
 
-export const cosmeticsLabelsData = [
+export const cosmeticsLabelsData: CosmeticsLabelDataType[] = [
   {
     logo: vLabel,
     name: "V-Label",
@@ -475,7 +504,7 @@ export const cosmeticsLabelsData = [
   },
 ];
 
-export const cosmeticsSourcesData = [
+export const cosmeticsSourcesData: string[] = [
   "https://animaltesting.fr/",
   "https://vegan-pratique.fr/",
   "http://www.animalter.com/",
