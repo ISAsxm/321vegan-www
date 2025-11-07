@@ -232,7 +232,7 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <div className="col-span-full [&.altcha-checkbox]:accent-brand-300">
+        <div className="col-span-full [&_.altcha-checkbox]:accent-brand-300">
           <Altcha ref={altchaRef} onStateChange={setCaptcha} />
         </div>
       </div>
