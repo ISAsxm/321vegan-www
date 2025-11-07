@@ -8,6 +8,9 @@ import "./globals.css";
 polyfill();
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000"
+  ),
   title: {
     template: "%s | 321 Vegan",
     default: "321 Vegan",
