@@ -1947,6 +1947,13 @@ export const veganAdditivesData: AdditiveDataType[] = [
   },
   {
     description: "",
+    e_number: "E968",
+    link: "https://en.wikipedia.org/wiki/E968",
+    name: "Érythritol",
+    status: "vegan",
+  },
+  {
+    description: "",
     e_number: "E999",
     link: "https://en.wikipedia.org/wiki/E999",
     name: "Extrait de Quillaia",
