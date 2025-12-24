@@ -65,6 +65,7 @@ export type PartnerDataType = {
   websiteUrl: string;
   description: string;
   affiliate: boolean;
+  showCode: boolean;
 };
 
 export type SourceDataLinkType = {
