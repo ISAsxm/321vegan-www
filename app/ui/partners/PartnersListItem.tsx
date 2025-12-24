@@ -1,5 +1,6 @@
+import { appStoreLinks } from "@/assets/assets";
 import { PartnerDataType } from "@/types/definitions";
-import { SquareArrowOutUpRight } from "lucide-react";
+import { Info, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";
 
 interface PartnersListItemProps {
@@ -15,6 +16,7 @@ const PartnersListItem = ({
     description,
     websiteUrl,
     affiliate,
+    showCode,
   },
 }: PartnersListItemProps) => {
   return (
@@ -47,20 +49,27 @@ const PartnersListItem = ({
           <div className="mt-auto">
             <h3 className="font-medium">Code promo {brandName}&nbsp;:</h3>
             <p className="text-yellow-600 mb-2">{discountAmount}</p>
-            <div className="flex items-center justify-between gap-2">
-              <span className="py-1 px-2.5 border-none rounded-lg bg-brand-600 text-white font-medium">
-                {discountCode}
-              </span>
-              <a
-                href={websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand-600 flex items-center gap-2 pb-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-100 md:after:scale-x-0 after:bg-brand-600 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
-              >
-                Consulter
-                <SquareArrowOutUpRight aria-hidden="true" />
-              </a>
-            </div>
+            {showCode ? (
+              <div className="flex items-center justify-between gap-2">
+                <span className="py-1 px-2.5 border-none rounded-lg bg-brand-600 text-white font-medium">
+                  {discountCode}
+                </span>
+                <a
+                  href={websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-600 flex items-center gap-2 pb-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-100 md:after:scale-x-0 after:bg-brand-600 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"
+                >
+                  Consulter
+                  <SquareArrowOutUpRight aria-hidden="true" />
+                </a>
+              </div>
+            ) : (
+              <p className="text-brand-700 text-sm font-medium flex items-center gap-2">
+                <Info size={16} aria-hidden="true" />
+                Téléchargez l&apos;application pour voir le code de réduction
+              </p>
+            )}
           </div>
         </div>
       </div>

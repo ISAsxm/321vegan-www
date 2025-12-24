@@ -310,6 +310,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Des cosmétiques et produits d'entretiens 100% vegan, éthiques, fabriqués à la main en France par une entreprise engagée. Vend aussi quelques vêtements durables.",
     affiliate: true,
+    showCode: true,
   },
   {
     brandName: "Petit Veganne",
@@ -320,6 +321,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Alternatives végétales aux fromages à base de noix de cajou bio. Entreprise artisanale française certifiée et labellisée BIO & VEGAN.",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Maison Protéine",
@@ -330,6 +332,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Des protéines en poudre véganes, bio, fabriquées en france, avec des ingrédients simples et sains.",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Zebra Vegan Shop",
@@ -340,6 +343,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "La boutique en ligne qui regroupe la plus belle sélection de marques de mode vegan. Fabriqués en Europe à partir de matériaux éco-responsables.",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Terroirs Véganes",
@@ -350,6 +354,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Des produits du terroir, innovants, essentiellement français. Véganes militantes, Lisa & Florence sont également les fondatrices du sanctuaire la Pondation de Félicie.",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Official Vegan Shop ",
@@ -360,6 +365,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Boutique en ligne entièrement végane avec de très nombreuses références.",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Vegetal Food",
@@ -370,6 +376,7 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Boutique de produits alimentaires véganes en ligne avec un très large choix !",
     affiliate: false,
+    showCode: false,
   },
   {
     brandName: "Le Papondu",
@@ -379,8 +386,7 @@ export const partnersData: PartnerDataType[] = [
     websiteUrl: "https://papondu.fr/acheter/",
     description:
       "Alternatives végétales à l’oeuf entier (blanc et jaune battus) produites en France et composées d’ingrédients d’origine naturelle.",
-    affiliate: false,
-  },
+    affiliate: false,    showCode: false,  },
 ];
 
 export const sourcesData: SourceDataType[] = [
