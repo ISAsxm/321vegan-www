@@ -1,4 +1,3 @@
-import { appStoreLinks } from "@/assets/assets";
 import { PartnerDataType } from "@/types/definitions";
 import { Info, SquareArrowOutUpRight } from "lucide-react";
 import Image from "next/image";

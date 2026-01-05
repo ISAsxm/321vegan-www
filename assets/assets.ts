@@ -23,6 +23,7 @@ import partnerPetitVeganne from "./partners/logo-petit-veganne.webp";
 import partnerTerroirs from "./partners/logo-terroirs.webp";
 import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
 import partnerPaPondu from "./partners/logo-papondu.webp";
+import partnerRagna from "./partners/logo-ragna.webp";
 import partnerZebra from "./partners/logo-zebra.webp";
 import chooseCF from "./labels/label-choose-cruelty-free.webp";
 import eveVegan from "./labels/label-eve-vegan.webp";
@@ -386,7 +387,20 @@ export const partnersData: PartnerDataType[] = [
     websiteUrl: "https://papondu.fr/acheter/",
     description:
       "Alternatives végétales à l’oeuf entier (blanc et jaune battus) produites en France et composées d’ingrédients d’origine naturelle.",
-    affiliate: false,    showCode: false,  },
+    affiliate: false,
+    showCode: false,
+  },
+  {
+    brandName: "Ragna",
+    logoName: partnerRagna,
+    discountCode: "321VEGAN20",
+    discountAmount: "20% de réduction",
+    websiteUrl: "https://www.ragnarok-store.fr/10220957",
+    description:
+      "Marque française d’énergie, regroupe RAGNADRINK (boissons énergisantes) et RAGNABOOST (pastilles énergisantes).",
+    affiliate: true,
+    showCode: true,
+  },
 ];
 
 export const sourcesData: SourceDataType[] = [
