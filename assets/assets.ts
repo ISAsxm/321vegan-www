@@ -24,6 +24,7 @@ import partnerTerroirs from "./partners/logo-terroirs.webp";
 import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
 import partnerPaPondu from "./partners/logo-papondu.webp";
 import partnerRagna from "./partners/logo-ragna.webp";
+import partnerPulse from "./partners/logo-pulse.webp";
 import partnerZebra from "./partners/logo-zebra.webp";
 import chooseCF from "./labels/label-choose-cruelty-free.webp";
 import eveVegan from "./labels/label-eve-vegan.webp";
@@ -303,6 +304,26 @@ export const faqData: FaqDataType[] = [
 
 export const partnersData: PartnerDataType[] = [
   {
+    brandName: "Ragna",
+    logoName: partnerRagna,
+    discountCode: "321VEGAN20",
+    discountAmount: "20% de réduction",
+    websiteUrl: "https://www.ragnarok-store.fr/10220957",
+    description:
+      "Marque française d’énergie, regroupe RAGNADRINK (boissons énergisantes) et RAGNABOOST (pastilles énergisantes).",
+    affiliate: true,
+  },
+  {
+    brandName: "Pulse Protein",
+    logoName: partnerPulse,
+    discountCode: "321VEGAN10",
+    discountAmount: "10% de réduction",
+    websiteUrl: "https://pulseprotein.co/",
+    description:
+      "Marque française de produits protéinés sains et gourmands. Véganes, sans gluten et sans soja.",
+    affiliate: true,
+  },
+  {
     brandName: "Comme Avant",
     logoName: partnerCommeavant,
     discountCode: "VEGAN10",
@@ -311,7 +332,6 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Des cosmétiques et produits d'entretiens 100% vegan, éthiques, fabriqués à la main en France par une entreprise engagée. Vend aussi quelques vêtements durables.",
     affiliate: true,
-    showCode: true,
   },
   {
     brandName: "Petit Veganne",
@@ -322,18 +342,6 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Alternatives végétales aux fromages à base de noix de cajou bio. Entreprise artisanale française certifiée et labellisée BIO & VEGAN.",
     affiliate: false,
-    showCode: false,
-  },
-  {
-    brandName: "Maison Protéine",
-    logoName: partnerMaisonprot,
-    discountCode: "321MAISON10",
-    discountAmount: "10% sur la première commande",
-    websiteUrl: "https://maisonproteine.com/fr/",
-    description:
-      "Des protéines en poudre véganes, bio, fabriquées en france, avec des ingrédients simples et sains.",
-    affiliate: false,
-    showCode: false,
   },
   {
     brandName: "Zebra Vegan Shop",
@@ -344,29 +352,6 @@ export const partnersData: PartnerDataType[] = [
     description:
       "La boutique en ligne qui regroupe la plus belle sélection de marques de mode vegan. Fabriqués en Europe à partir de matériaux éco-responsables.",
     affiliate: false,
-    showCode: false,
-  },
-  {
-    brandName: "Terroirs Véganes",
-    logoName: partnerTerroirs,
-    discountCode: "321VEGAN10",
-    discountAmount: "10% de réduction (hors promos)",
-    websiteUrl: "https://www.terroirs-veganes.fr",
-    description:
-      "Des produits du terroir, innovants, essentiellement français. Véganes militantes, Lisa & Florence sont également les fondatrices du sanctuaire la Pondation de Félicie.",
-    affiliate: false,
-    showCode: false,
-  },
-  {
-    brandName: "Official Vegan Shop ",
-    logoName: partnerOVS,
-    discountCode: "321VEGANOVS",
-    discountAmount: "5% de réduction (hors promos)",
-    websiteUrl: "https://www.officialveganshop.com/",
-    description:
-      "Boutique en ligne entièrement végane avec de très nombreuses références.",
-    affiliate: false,
-    showCode: false,
   },
   {
     brandName: "Vegetal Food",
@@ -377,7 +362,26 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Boutique de produits alimentaires véganes en ligne avec un très large choix !",
     affiliate: false,
-    showCode: false,
+  },
+  {
+    brandName: "Terroirs Véganes",
+    logoName: partnerTerroirs,
+    discountCode: "321VEGAN10",
+    discountAmount: "10% de réduction (hors promos)",
+    websiteUrl: "https://www.terroirs-veganes.fr",
+    description:
+      "Des produits du terroir, innovants, essentiellement français. Véganes militantes, Lisa & Florence sont également les fondatrices du sanctuaire la Pondation de Félicie.",
+    affiliate: false,
+  },
+  {
+    brandName: "Maison Protéine",
+    logoName: partnerMaisonprot,
+    discountCode: "321MAISON10",
+    discountAmount: "10% sur la première commande",
+    websiteUrl: "https://maisonproteine.com/fr/",
+    description:
+      "Des protéines en poudre véganes, bio, fabriquées en france, avec des ingrédients simples et sains.",
+    affiliate: false,
   },
   {
     brandName: "Le Papondu",
@@ -388,18 +392,16 @@ export const partnersData: PartnerDataType[] = [
     description:
       "Alternatives végétales à l’oeuf entier (blanc et jaune battus) produites en France et composées d’ingrédients d’origine naturelle.",
     affiliate: false,
-    showCode: false,
   },
   {
-    brandName: "Ragna",
-    logoName: partnerRagna,
-    discountCode: "321VEGAN20",
-    discountAmount: "20% de réduction",
-    websiteUrl: "https://www.ragnarok-store.fr/10220957",
+    brandName: "Official Vegan Shop ",
+    logoName: partnerOVS,
+    discountCode: "321VEGANOVS",
+    discountAmount: "5% de réduction (hors promos)",
+    websiteUrl: "https://www.officialveganshop.com/",
     description:
-      "Marque française d’énergie, regroupe RAGNADRINK (boissons énergisantes) et RAGNABOOST (pastilles énergisantes).",
-    affiliate: true,
-    showCode: true,
+      "Boutique en ligne entièrement végane avec de très nombreuses références.",
+    affiliate: false,
   },
 ];
 

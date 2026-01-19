@@ -65,7 +65,6 @@ export type PartnerDataType = {
   websiteUrl: string;
   description: string;
   affiliate: boolean;
-  showCode: boolean;
 };
 
 export type SourceDataLinkType = {
@@ -92,5 +91,5 @@ export type AdditiveDataType = {
   e_number: string;
   name: string;
   status: string;
-  link: string;
+  source: string;
 };

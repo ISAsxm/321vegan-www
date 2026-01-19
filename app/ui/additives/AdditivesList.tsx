@@ -21,7 +21,7 @@ const AdditivesList = ({ data }: AdditivesListProps) => {
 };
 
 export const AdditiveItem = ({ item }: AdditiveItemProps) => {
-  const { e_number, name, description, status, link } = item;
+  const { e_number, name, description, status, source } = item;
   return (
     <li className="inline-block ">
       <Modal.Open opens={e_number}>
@@ -30,8 +30,8 @@ export const AdditiveItem = ({ item }: AdditiveItemProps) => {
             status === "vegan"
               ? "bg-brand-100 text-brand-700 border-brand-700"
               : status === "carniste"
-              ? "bg-red-100 text-red-700 border-red-700"
-              : "bg-orange-100 text-orange-700 border-orange-700"
+                ? "bg-red-100 text-red-700 border-red-700"
+                : "bg-orange-100 text-orange-700 border-orange-700"
           } `}
           aria-label={`Consulter en détail l'additif ${e_number}`}
         >
@@ -45,28 +45,28 @@ export const AdditiveItem = ({ item }: AdditiveItemProps) => {
               status === "vegan"
                 ? "text-brand-500"
                 : status === "carniste"
-                ? "text-red-500"
-                : "text-orange-500"
+                  ? "text-red-500"
+                  : "text-orange-500"
             }`}
           >
             {e_number} &mdash; {name}
           </h3>
           <p className="px-4 py-2 leading-relaxed">{description}</p>
-          {link && (
+          {source && (
             <span className="px-4 py-2 mt-2">
               <a
-                href={link}
+                href={source}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`italic pb-1 inline-flex items-center gap-2 border-b  cursor-pointer text-sm text-gray-600 hover:shadow-[0_1rem_2rem] hover:text-white hover:-translate-y-1 focus:text-white  transition-transform duration-300 ${
                   status === "vegan"
                     ? "border-brand-500 hover:bg-brand-500 focus:bg-brand-600 active:border-brand-600"
                     : status === "carniste"
-                    ? "border-red-500 hover:bg-red-500 focus:bg-red-600 active:border-red-600"
-                    : "border-orange-500 hover:bg-orange-500 focus:bg-orange-600 active:border-orange-600"
+                      ? "border-red-500 hover:bg-red-500 focus:bg-red-600 active:border-red-600"
+                      : "border-orange-500 hover:bg-orange-500 focus:bg-orange-600 active:border-orange-600"
                 }`}
               >
-                Souces&nbsp;: {link}
+                Souces&nbsp;: {source}
               </a>
             </span>
           )}

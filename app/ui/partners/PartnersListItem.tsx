@@ -15,7 +15,6 @@ const PartnersListItem = ({
     description,
     websiteUrl,
     affiliate,
-    showCode,
   },
 }: PartnersListItemProps) => {
   return (
@@ -48,7 +47,7 @@ const PartnersListItem = ({
           <div className="mt-auto">
             <h3 className="font-medium">Code promo {brandName}&nbsp;:</h3>
             <p className="text-yellow-600 mb-2">{discountAmount}</p>
-            {showCode ? (
+            {affiliate ? (
               <div className="flex items-center justify-between gap-2">
                 <span className="py-1 px-2.5 border-none rounded-lg bg-brand-600 text-white font-medium">
                   {discountCode}
