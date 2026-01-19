@@ -318,7 +318,7 @@ export const partnersData: PartnerDataType[] = [
     logoName: partnerPulse,
     discountCode: "321VEGAN10",
     discountAmount: "10% de réduction",
-    websiteUrl: "https://pulseprotein.co/",
+    websiteUrl: "https://pulseprotein.co?sca_ref=10392739.eblIYTrBBL&utm_source=affiliate&utm_medium=affiliate&utm_campaign=influence",
     description:
       "Marque française de produits protéinés sains et gourmands. Véganes, sans gluten et sans soja.",
     affiliate: true,
