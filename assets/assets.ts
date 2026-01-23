@@ -19,7 +19,6 @@ import mockupCosmetics from "./mockup-cosmetics.webp";
 import partnerCommeavant from "./partners/logo-comme-avant.webp";
 import partnerMaisonprot from "./partners/logo-maisonprot.webp";
 import partnerOVS from "./partners/logo-ovs.webp";
-import partnerPetitVeganne from "./partners/logo-petit-veganne.webp";
 import partnerTerroirs from "./partners/logo-terroirs.webp";
 import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
 import partnerPaPondu from "./partners/logo-papondu.webp";
@@ -334,16 +333,6 @@ export const partnersData: PartnerDataType[] = [
     affiliate: true,
   },
   {
-    brandName: "Petit Veganne",
-    logoName: partnerPetitVeganne,
-    discountCode: "321PV10",
-    discountAmount: "10% de réduction",
-    websiteUrl: "https://petit-veganne.com",
-    description:
-      "Alternatives végétales aux fromages à base de noix de cajou bio. Entreprise artisanale française certifiée et labellisée BIO & VEGAN.",
-    affiliate: false,
-  },
-  {
     brandName: "Zebra Vegan Shop",
     logoName: partnerZebra,
     discountCode: "321VEGANZEBRA",
@@ -381,7 +370,7 @@ export const partnersData: PartnerDataType[] = [
     websiteUrl: "https://maisonproteine.com/fr/",
     description:
       "Des protéines en poudre véganes, bio, fabriquées en france, avec des ingrédients simples et sains.",
-    affiliate: false,
+    affiliate: true,
   },
   {
     brandName: "Le Papondu",
