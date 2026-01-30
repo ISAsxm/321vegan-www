@@ -342,7 +342,7 @@ export const partnersData: PartnerDataType[] = [
     discountAmount: "10% de réduction",
     websiteUrl: "https://yumgo.fr/discount/321VEGAN10",
     description:
-      "Alternatives végétales aux oeufs entiers par le fondateur des boulangeries végétales Land & Monkeys.",
+      "Alternatives végétales aux oeufs entiers. Même texture, même gourmandise et sans allergènes.",
     affiliate: true,
   },
   {
