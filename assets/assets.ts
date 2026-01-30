@@ -24,6 +24,8 @@ import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
 import partnerPaPondu from "./partners/logo-papondu.webp";
 import partnerRagna from "./partners/logo-ragna.webp";
 import partnerPulse from "./partners/logo-pulse.webp";
+import partnerReify from "./partners/logo-reify.webp";
+import partnerYumgo from "./partners/logo-yumgo.webp";
 import partnerZebra from "./partners/logo-zebra.webp";
 import chooseCF from "./labels/label-choose-cruelty-free.webp";
 import eveVegan from "./labels/label-eve-vegan.webp";
@@ -317,9 +319,30 @@ export const partnersData: PartnerDataType[] = [
     logoName: partnerPulse,
     discountCode: "321VEGAN10",
     discountAmount: "10% de réduction",
-    websiteUrl: "https://pulseprotein.co?sca_ref=10392739.eblIYTrBBL&utm_source=affiliate&utm_medium=affiliate&utm_campaign=influence",
+    websiteUrl:
+      "https://pulseprotein.co?sca_ref=10392739.eblIYTrBBL&utm_source=affiliate&utm_medium=affiliate&utm_campaign=influence",
     description:
       "Marque française de produits protéinés sains et gourmands. Véganes, sans gluten et sans soja.",
+    affiliate: true,
+  },
+  {
+    brandName: "Reify",
+    logoName: partnerReify,
+    discountCode: "321VEGAN",
+    discountAmount: "10% de réduction",
+    websiteUrl: "https://reifynutrition.com/discount/321vegan",
+    description:
+      "Barres salées protéinées. Un snack français audacieux : salé, sain et plein de bons nutriments.",
+    affiliate: true,
+  },
+  {
+    brandName: "Yumgo",
+    logoName: partnerYumgo,
+    discountCode: "321VEGAN10",
+    discountAmount: "10% de réduction",
+    websiteUrl: "https://yumgo.fr/discount/321VEGAN10",
+    description:
+      "Alternatives végétales aux oeufs entiers par le fondateur des boulangeries végétales Land & Monkeys.",
     affiliate: true,
   },
   {
