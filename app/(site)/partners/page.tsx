@@ -1,6 +1,9 @@
 import { Metadata } from "next";
-import { mockups } from "@/assets/assets";
+import { Suspense } from "react";
 import Image from "next/image";
+
+import { mockups } from "@/assets/assets";
+import { PartnersSkeleton } from "@/app/ui/skeletons";
 import AppStoresCta from "@/app/ui/components/AppStoresCta";
 import ContactUsCta from "@/app/ui/components/ContactUsCta";
 import PartnersList from "@/app/ui/partners/PartnersList";
@@ -8,7 +11,7 @@ import PartnersList from "@/app/ui/partners/PartnersList";
 export const metadata: Metadata = {
   title: "Nos partenaires",
   description:
-    "Avec les codes promos de nos partenaires, vous bénéficiez de réductions lors de vos achats dans leurs boutiques en ligne.",
+    "Avec les codes promos de nos partenaires, vous bénéficiez de réductions lors de vos achats dans leurs boutiques en ligne de produits alimentaires, vêtements, accessoires et cosmétiques véganes.",
 };
 
 export default function Page() {
@@ -41,8 +44,8 @@ export default function Page() {
                 <p className="text-justify lg:pt-12 leading-relaxed">
                   321 Vegan s&apos;associe avec{" "}
                   <strong>
-                    des boutiques en ligne de produits, vêtements, accessoires
-                    et cosmétiques véganes
+                    des boutiques en ligne de produits alimentaires, vêtements,
+                    accessoires et cosmétiques véganes
                   </strong>{" "}
                   afin de vous faire{" "}
                   <strong>bénéficier de réductions lors de vos achats</strong>.
@@ -77,7 +80,9 @@ export default function Page() {
               Liste de nos partenaires offrant des codes promos&nbsp;:
             </h2>
 
-            <PartnersList />
+            <Suspense fallback={<PartnersSkeleton />}>
+              <PartnersList />
+            </Suspense>
 
             <p className="mt-12 mb-16 italic leading-relaxed">
               Les codes promos marqués d&apos;une étoile ⭐️ sont des codes

@@ -12,6 +12,7 @@
     "@react-email/components": "^0.5.7",
     "altcha": "^2.3.0",
     "altcha-lib": "^1.4.1",
+    "axios": "^1.13.5",
     "clsx": "^2.1.1",
     "interweave": "^13.1.1",
     "interweave-ssr": "^2.0.0",

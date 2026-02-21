@@ -57,14 +57,28 @@ export type FaqDataType = {
   description: string;
 };
 
+export type PartnerCategorieDataType = {
+  id: number;
+  created_at: string;
+  updated_at: string;
+  name: string;
+};
+
 export type PartnerDataType = {
-  brandName: string;
-  logoName: StaticImageData;
-  discountCode: string;
-  discountAmount: string;
-  websiteUrl: string;
+  id: number;
+  created_at: string;
+  updated_at: string;
+  name: string;
+  url: string;
+  logo_path: string;
   description: string;
-  affiliate: boolean;
+  discount_text: string;
+  discount_code: string;
+  is_affiliate: boolean;
+  show_code_in_website: boolean;
+  is_active: boolean;
+  category_id: number;
+  category: PartnerCategorieDataType;
 };
 
 export type SourceDataLinkType = {

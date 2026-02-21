@@ -5,7 +5,7 @@ import type { ContactFormData } from "@/types/definitions";
 
 export async function contactMeAction(
   captcha: string | null,
-  formData: ContactFormData
+  formData: ContactFormData,
 ) {
   if (!captcha)
     return { success: false, message: "Captcha challenge not completed" };
