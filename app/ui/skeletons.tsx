@@ -38,3 +38,35 @@ export function PartnersSkeleton() {
     </div>
   );
 }
+
+export function AdditiveSkeleton() {
+  return (
+    <li className="inline-block ">
+      <div className="rounded-full h-8 px-3 py-1 shadow-sm w-[6ch] border bg-brand-100 border-brand-200"></div>
+    </li>
+  );
+}
+
+export function AdditivesSkeleton() {
+  return (
+    <ul className="flex flex-wrap items-center justify-evenly gap-3 animate-pulse">
+      {[
+        ...Array(309)
+          .keys()
+          .map((a) => <AdditiveSkeleton key={a} />),
+      ]}
+    </ul>
+  );
+}
+
+export function SearchAdditiveSkeleton() {
+  return (
+    <div className="inline-flex flex-col max-w-md animate-pulse">
+      <div className="flex items-center gap-1 py-1">
+        <div className="h-8 w-50 bg-brand-100 rounded"></div>
+        <div className="h-8 w-8 bg-brand-100 rounded"></div>
+      </div>
+      <span className="h-2 w-full bg-brand-100 rounded"></span>
+    </div>
+  );
+}

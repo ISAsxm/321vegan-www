@@ -1,12 +1,10 @@
 import { Metadata } from "next";
-import { Suspense } from "react";
 import Image from "next/image";
 
 import { mockups } from "@/assets/assets";
-import { PartnersSkeleton } from "@/app/ui/skeletons";
 import AppStoresCta from "@/app/ui/components/AppStoresCta";
 import ContactUsCta from "@/app/ui/components/ContactUsCta";
-import PartnersList from "@/app/ui/partners/PartnersList";
+import PartnersSection from "@/app/ui/partners/PartnersSection";
 
 export const metadata: Metadata = {
   title: "Nos partenaires",
@@ -76,20 +74,7 @@ export default function Page() {
           </section>
 
           <section id="discounts" className="scroll-mt-20">
-            <h2 className="my-12 text-lg font-merriweather">
-              Liste de nos partenaires offrant des codes promos&nbsp;:
-            </h2>
-
-            <Suspense fallback={<PartnersSkeleton />}>
-              <PartnersList />
-            </Suspense>
-
-            <p className="mt-12 mb-16 italic leading-relaxed">
-              Les codes promos marqués d&apos;une étoile ⭐️ sont des codes
-              affiliés, c&apos;est-à-dire qu&apos;ils permettent à 321 Vegan de
-              toucher une petite commission sur la vente. Les utiliser permet de
-              soutenir 321 Vegan, merci&nbsp;!
-            </p>
+            <PartnersSection />
           </section>
 
           <section>

@@ -1,11 +1,16 @@
 "use client";
 import { FormEvent, useRef, useState } from "react";
+import { AdditiveDataType } from "@/types/definitions";
+
 import { Search } from "lucide-react";
-import { additivesData } from "@/assets/additives";
 import { useModalContext } from "@/app/ui/components/Modal";
 import Modal from "@/app/ui/components/Modal";
 
-const AdditivesSearch = () => {
+interface AdditivesListProps {
+  data: AdditiveDataType[];
+}
+
+const AdditivesSearch = ({ data }: AdditivesListProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isPending, setIsPending] = useState<boolean>(false);
   const { setOpenName } = useModalContext();
@@ -16,11 +21,11 @@ const AdditivesSearch = () => {
     setIsPending(true);
     const value = inputRef.current.value.toLowerCase();
     const additive = await Promise.resolve(
-      additivesData.find(
+      data.find(
         (item) =>
           item.e_number.toLowerCase() === value ||
-          item.name.toLowerCase() === value
-      )
+          item.name.toLowerCase() === value,
+      ),
     );
     setIsPending(false);
     setOpenName(additive?.e_number ?? "additive-not-found");

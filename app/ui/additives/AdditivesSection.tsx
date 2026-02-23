@@ -1,24 +1,43 @@
-"use client";
-import {
-  veganAdditivesData,
-  nonVeganAdditesData,
-  maybeVeganAdditivesData,
-} from "@/assets/additives";
+import { Suspense } from "react";
+import { AdditiveDataType } from "@/types/definitions";
+import { fetchAdditives } from "@/app/lib/datas";
+import { AdditivesSkeleton, SearchAdditiveSkeleton } from "@/app/ui/skeletons";
+import { CircleQuestionMark, CircleX, Vegan } from "lucide-react";
 import Modal from "@/app/ui/components/Modal";
 import AdditivesList from "@/app/ui/additives/AdditivesList";
 import AdditivesSearch from "@/app/ui/additives/AdditivesSearch";
-import { CircleQuestionMark, CircleX, Vegan } from "lucide-react";
 
-const AdditivesSection = () => {
+const partitionBy = (
+  arr: AdditiveDataType[],
+  fn: (a: AdditiveDataType, i: number, arr: AdditiveDataType[]) => void,
+) => [
+  ...arr
+    .reduce((acc, val, i, arr) => {
+      const current = fn(val, i, arr);
+      if (acc.has(current)) acc.get(current).push(val);
+      else acc.set(current, [val]);
+      return acc;
+    }, new Map())
+    .values(),
+];
+
+const AdditivesSection = async () => {
+  const additivesData = await fetchAdditives();
+  if (!additivesData.length) return null;
+  const [veganAdditivesData, nonVeganAdditesData, maybeVeganAdditivesData] =
+    partitionBy(additivesData, (a) => a.status);
+
   return (
     <Modal>
-      <section id="additives" className="scroll-mt-20">
+      <>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 my-12">
           <h2 className="text-lg font-merriweather">
             Liste des additifs par catégories&nbsp;:
           </h2>
 
-          <AdditivesSearch />
+          <Suspense fallback={<SearchAdditiveSkeleton />}>
+            <AdditivesSearch data={additivesData} />
+          </Suspense>
         </div>
 
         <div className="w-full bg-brand-600/80 rounded-xl shadow-sm p-8 mb-8">
@@ -32,7 +51,9 @@ const AdditivesSection = () => {
               détail.
             </p>
 
-            <AdditivesList data={veganAdditivesData} />
+            <Suspense fallback={<AdditivesSkeleton />}>
+              <AdditivesList data={veganAdditivesData} />
+            </Suspense>
           </div>
         </div>
 
@@ -47,7 +68,9 @@ const AdditivesSection = () => {
               détail.
             </p>
 
-            <AdditivesList data={maybeVeganAdditivesData} />
+            <Suspense fallback={<AdditivesSkeleton />}>
+              <AdditivesList data={maybeVeganAdditivesData} />
+            </Suspense>
           </div>
         </div>
 
@@ -62,7 +85,9 @@ const AdditivesSection = () => {
               détail.
             </p>
 
-            <AdditivesList data={nonVeganAdditesData} />
+            <Suspense fallback={<AdditivesSkeleton />}>
+              <AdditivesList data={nonVeganAdditesData} />
+            </Suspense>
           </div>
         </div>
 
@@ -76,7 +101,7 @@ const AdditivesSection = () => {
           </a>
           . Les données ont été modifiées par rapport à leur version originale.
         </p>
-      </section>
+      </>
     </Modal>
   );
 };

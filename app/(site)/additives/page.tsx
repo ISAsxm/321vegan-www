@@ -8,7 +8,7 @@ import JoinUsCta from "@/app/ui/components/JoinUsCta";
 export const metadata: Metadata = {
   title: "Vérification d'additifs",
   description:
-    "Consultez rapidement si un additif est végétalien grâce à notre base de données d'additifs.",
+    "Vérifiez rapidement si un additif est végétalien grâce à notre base de données d'additifs.",
 };
 
 export default function Page() {
@@ -73,7 +73,9 @@ export default function Page() {
             </div>
           </section>
 
-          <AdditivesSection />
+          <section id="additives" className="scroll-mt-20">
+            <AdditivesSection />
+          </section>
 
           <section>
             <JoinUsCta

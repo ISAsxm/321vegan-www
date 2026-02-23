@@ -101,9 +101,12 @@ export type CosmeticsLabelDataType = {
 };
 
 export type AdditiveDataType = {
-  description: string;
+  id: number;
+  created_at: string;
+  updated_at: string;
   e_number: string;
   name: string;
+  description: string;
   status: string;
   source: string;
 };
