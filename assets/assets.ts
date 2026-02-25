@@ -5,7 +5,6 @@ import {
   FaqDataType,
   FeatureDataType,
   OwnerType,
-  PartnerDataType,
   SitmapDataType,
   SocialNetworkLinksType,
   SourceDataType,
@@ -16,17 +15,6 @@ import mockupPartners from "./mockup-partners.webp";
 import mockupScan from "./mockup-scan.webp";
 import mockupAdditives from "./mockup-additives.webp";
 import mockupCosmetics from "./mockup-cosmetics.webp";
-import partnerCommeavant from "./partners/logo-comme-avant.webp";
-import partnerMaisonprot from "./partners/logo-maisonprot.webp";
-import partnerOVS from "./partners/logo-ovs.webp";
-import partnerTerroirs from "./partners/logo-terroirs.webp";
-import partnerVegetalFood from "./partners/logo-vegetalfood.webp";
-import partnerPaPondu from "./partners/logo-papondu.webp";
-import partnerRagna from "./partners/logo-ragna.webp";
-import partnerPulse from "./partners/logo-pulse.webp";
-import partnerReify from "./partners/logo-reify.webp";
-import partnerYumgo from "./partners/logo-yumgo.webp";
-import partnerZebra from "./partners/logo-zebra.webp";
 import chooseCF from "./labels/label-choose-cruelty-free.webp";
 import eveVegan from "./labels/label-eve-vegan.webp";
 import ihtk from "./labels/label-ihtk.webp";
@@ -300,120 +288,6 @@ export const faqData: FaqDataType[] = [
     title: "D’où vient l’appli ?",
     description:
       "Le projet est indépendant, développé publiquement (dépôt GitHub), maintenu et distribué par Camille. Ce site web ainsi que l'outil de vérification des produits ont été développés par IsaSXM, contributrice essentielle du projet.",
-  },
-];
-
-export const partnersData: PartnerDataType[] = [
-  {
-    brandName: "Ragna",
-    logoName: partnerRagna,
-    discountCode: "321VEGAN20",
-    discountAmount: "20% de réduction",
-    websiteUrl: "https://www.ragnarok-store.fr/10220957",
-    description:
-      "Marque française d’énergie, regroupe RAGNADRINK (boissons énergisantes) et RAGNABOOST (pastilles énergisantes).",
-    affiliate: true,
-  },
-  {
-    brandName: "Pulse Protein",
-    logoName: partnerPulse,
-    discountCode: "321VEGAN10",
-    discountAmount: "10% de réduction",
-    websiteUrl:
-      "https://pulseprotein.co?sca_ref=10392739.eblIYTrBBL&utm_source=affiliate&utm_medium=affiliate&utm_campaign=influence",
-    description:
-      "Marque française de produits protéinés sains et gourmands. Véganes, sans gluten et sans soja.",
-    affiliate: true,
-  },
-  {
-    brandName: "Reify",
-    logoName: partnerReify,
-    discountCode: "321VEGAN",
-    discountAmount: "10% de réduction",
-    websiteUrl: "https://reifynutrition.com/discount/321vegan",
-    description:
-      "Barres salées protéinées. Un snack français audacieux : salé, sain et plein de bons nutriments.",
-    affiliate: true,
-  },
-  {
-    brandName: "Yumgo",
-    logoName: partnerYumgo,
-    discountCode: "321VEGAN10",
-    discountAmount: "10% de réduction",
-    websiteUrl: "https://yumgo.fr/discount/321VEGAN10",
-    description:
-      "Alternatives végétales aux oeufs entiers. Même texture, même gourmandise et sans allergènes.",
-    affiliate: true,
-  },
-  {
-    brandName: "Comme Avant",
-    logoName: partnerCommeavant,
-    discountCode: "VEGAN10",
-    discountAmount: "10% de réduction (1/ personne)",
-    websiteUrl: "https://www.comme-avant.bio/?ae=1379",
-    description:
-      "Des cosmétiques et produits d'entretiens 100% vegan, éthiques, fabriqués à la main en France par une entreprise engagée. Vend aussi quelques vêtements durables.",
-    affiliate: true,
-  },
-  {
-    brandName: "Zebra Vegan Shop",
-    logoName: partnerZebra,
-    discountCode: "321VEGANZEBRA",
-    discountAmount: "10% de réduction",
-    websiteUrl: "https://www.zebraveganshop.com/",
-    description:
-      "La boutique en ligne qui regroupe la plus belle sélection de marques de mode vegan. Fabriqués en Europe à partir de matériaux éco-responsables.",
-    affiliate: false,
-  },
-  {
-    brandName: "Vegetal Food",
-    logoName: partnerVegetalFood,
-    discountCode: "321VEGAN10",
-    discountAmount: "10% de réduction (hors promos)",
-    websiteUrl: "https://vegetalfood.fr",
-    description:
-      "Boutique de produits alimentaires véganes en ligne avec un très large choix !",
-    affiliate: false,
-  },
-  {
-    brandName: "Terroirs Véganes",
-    logoName: partnerTerroirs,
-    discountCode: "321VEGAN10",
-    discountAmount: "10% de réduction (hors promos)",
-    websiteUrl: "https://www.terroirs-veganes.fr",
-    description:
-      "Des produits du terroir, innovants, essentiellement français. Véganes militantes, Lisa & Florence sont également les fondatrices du sanctuaire la Pondation de Félicie.",
-    affiliate: false,
-  },
-  {
-    brandName: "Maison Protéine",
-    logoName: partnerMaisonprot,
-    discountCode: "321MAISON10",
-    discountAmount: "10% sur la première commande",
-    websiteUrl: "https://maisonproteine.com/fr/",
-    description:
-      "Des protéines en poudre véganes, bio, fabriquées en france, avec des ingrédients simples et sains.",
-    affiliate: true,
-  },
-  {
-    brandName: "Le Papondu",
-    logoName: partnerPaPondu,
-    discountCode: "PAPON10",
-    discountAmount: "10% sur la première commande",
-    websiteUrl: "https://papondu.fr/acheter/",
-    description:
-      "Alternatives végétales à l’oeuf entier (blanc et jaune battus) produites en France et composées d’ingrédients d’origine naturelle.",
-    affiliate: false,
-  },
-  {
-    brandName: "Official Vegan Shop ",
-    logoName: partnerOVS,
-    discountCode: "321VEGANOVS",
-    discountAmount: "5% de réduction (hors promos)",
-    websiteUrl: "https://www.officialveganshop.com/",
-    description:
-      "Boutique en ligne entièrement végane avec de très nombreuses références.",
-    affiliate: false,
   },
 ];
 

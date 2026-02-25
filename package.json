@@ -12,6 +12,7 @@
     "@react-email/components": "^0.5.7",
     "altcha": "^2.3.0",
     "altcha-lib": "^1.4.1",
+    "axios": "^1.13.5",
     "clsx": "^2.1.1",
     "interweave": "^13.1.1",
     "interweave-ssr": "^2.0.0",
@@ -43,7 +44,8 @@
     "overrides": {
       "@types/react": "19.2.7",
       "@types/react-dom": "19.2.3",
-      "js-yaml": "4.1.1"
+      "js-yaml": "4.1.1",
+      "minimatch": "10.2.1"
     },
     "onlyBuiltDependencies": [
       "sharp",
