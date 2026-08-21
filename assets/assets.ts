@@ -35,6 +35,7 @@ import petaCF from "./labels/label-peta-cruelty-free.webp";
 import vLabel from "./labels/label-v-label.webp";
 import veganSociety from "./labels/label-vegan-society.webp";
 
+import anonymousForTheVoiceless from "./resources/associations/asso-anonymous-for-the-voiceless.webp";
 import asmAsso from "./resources/associations/asso-animal-save-movement.webp";
 import coexister from "./resources/associations/asso-coexister.webp";
 import futurAsso from "./resources/associations/asso-futur.webp";
@@ -661,6 +662,14 @@ export const resourceCategoriesData: ResourceCategoriesDataType[] = [
 ];
 
 export const resourcesData: ResourcesDataType[] = [
+  {
+    category_slug: "associations",
+    name: "Anonymous for the Voiceless",
+    description:
+      "Anonymous for the Voiceless est un mouvement de défense des droits des animaux avec une position abolitionniste. Les activistes sensibilisent le public dans la rue notamment en montrant des images de l'exploitation animale.",
+    link: "https://anonymousforthevoiceless.org",
+    logo: anonymousForTheVoiceless,
+  },
   {
     category_slug: "associations",
     name: "L214 Éthique & Animaux",
